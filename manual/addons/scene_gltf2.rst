@@ -679,6 +679,7 @@ are supported directly by this add-on:
 - ``EXT_meshopt_compression``
 - ``KHR_meshopt_compression``
 - ``KHR_animation_pointer``
+- ``EXT_texture_webp``
 - ``KHR_gaussian_splatting``
 
 .. rubric:: Export
@@ -701,6 +702,7 @@ are supported directly by this add-on:
 - ``EXT_meshopt_compression``
 - ``KHR_meshopt_compression``
 - ``KHR_animation_pointer``
+- ``EXT_texture_webp``
 
 Third-party glTF Extensions
 ---------------------------
