@@ -30,6 +30,7 @@ such as Unity3D, Unreal Engine 4, and Godot.
 This importer/exporter supports the following glTF 2.0 features:
 
 - Meshes
+- Gaussian Splatting (via ``KHR_gaussian_splatting``, import only for now)
 - Materials (Principled BSDF) and Shadeless (Unlit)
 - Textures
 - Cameras
@@ -678,6 +679,7 @@ are supported directly by this add-on:
 - ``EXT_meshopt_compression``
 - ``KHR_meshopt_compression``
 - ``KHR_animation_pointer``
+- ``KHR_gaussian_splatting``
 
 .. rubric:: Export
 
@@ -855,6 +857,13 @@ Animation Pointer is a way to export some properties of a material, or a light, 
 This is an experimental feature.
 
 Custom Properties (extras in glTF) can be animated, but only for 1 composant data for now (float, int, bool).
+
+
+Gaussian Splatting
+==================
+
+The ``KHR_gaussian_splatting`` extension allows importing Gaussian Splatting assets.
+Currently, this is supported for import only.
 
 
 File Format Variations
