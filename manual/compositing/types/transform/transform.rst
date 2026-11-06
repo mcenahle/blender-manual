@@ -64,3 +64,22 @@ Outputs
 
 Image
    Standard color output.
+
+
+Usage
+=====
+
+Interactive Gizmo
+-----------------
+
+The Transform node provides an interactive gizmo for moving, rotating,
+and scaling the image directly in the preview.
+
+Dragging the gizmo adjusts the corresponding *X*, *Y*, *Angle*, and *Scale*
+inputs without manually entering their values.
+
+The gizmo supports multiple transformations connected in sequence,
+allowing adjustments to account for preceding transformations.
+
+See :ref:`Node Gizmos <compositor-node-gizmos>` for information on
+enabling and using gizmos in the Compositor and Image Editor.
