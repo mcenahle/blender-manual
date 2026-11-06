@@ -7,9 +7,12 @@ Cameras
 Panoramic Cameras
 =================
 
-Cycles supports several types of panoramic cameras which are described in detail below.
-Note that these cannot be displayed in non-rendered modes in the viewport,
-i.e. *Solid* mode; they will only work for the final render.
+Cycles and EEVEE support several types of panoramic cameras which are described in detail below.
+
+.. note::
+
+   EEVEE has some restrictions for a panoramic camera,
+   see the EEVEE :ref:`Panoramic Camera limitations <eevee-limitations-panoramic>`.
 
 
 Equirectangular

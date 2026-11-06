@@ -18,7 +18,19 @@ Attributes and Properties
 Cameras
 =======
 
-- Only perspective and orthographic projections are currently supported.
+- Only perspective, orthographic, and panoramic projections are currently supported.
+
+
+.. _eevee-limitations-panoramic:
+
+Panoramic Cameras
+------------------
+
+EEVEE may need up to six subviews to render a panoramic camera, combined into the final image.
+
+- Depth of field is not supported yet.
+- Screen space effects are disabled for now.
+- Temporal reprojection for volumetrics is disabled in the viewport.
 
 
 Lights

@@ -19,7 +19,8 @@ fidelity is not the primary goal.
 
 .. seealso::
 
-   :ref:`Limitations <eevee-limitations-raytracing>`.
+   :ref:`Limitations <eevee-limitations-raytracing>` and
+   :ref:`Panoramic Camera Limitations <eevee-limitations-panoramic>`.
 
 Method
    Determine the tracing method used to find scene-ray intersections and indirect lighting.
