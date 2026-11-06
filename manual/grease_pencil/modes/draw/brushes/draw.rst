@@ -86,6 +86,12 @@ Stroke Mode
       Applies both the stroke and fill components of the material
       when creating or editing strokes.
 
+.. _bpy.types.BrushGpencilSettings.use_cyclic_stroke:
+
+Cyclic
+   Connect the end of the stroke to its start, creating a closed loop.
+   Use this to draw enclosed shapes, such as outlines for filled areas.
+
 .. _bpy.types.BrushGpencilSettings.caps_type:
 
 Caps Type
