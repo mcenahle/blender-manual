@@ -28,6 +28,7 @@
    shrink-fatten.rst
    space_edge_loops_evenly.rst
    relax_edge_loops.rst
+   curve_edge_loops_between_selected.rst
    fit_edge_loops_to_annotation.rst
    skin_resize.rst
    warp.rst
