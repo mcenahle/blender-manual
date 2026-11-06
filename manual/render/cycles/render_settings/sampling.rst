@@ -92,6 +92,7 @@ Denoiser
    :Automatic:
       Uses GPU accelerated denoising if supported, for best performance.
       Prefers OpenImageDenoise over OptiX.
+      Only available for viewport denoising; does not select DLSS automatically.
    :OpenImageDenoise:
       Uses Intel's `Open Image Denoise <https://www.openimagedenoise.org/>`__,
       an AI denoiser. Typically provides the highest quality.
@@ -100,6 +101,29 @@ Denoiser
       Supports GPU acceleration on some older NVIDIA GPUs where OpenImageDenoise does not.
 
       Only available on NVIDIA GPUs when configured in the :ref:`editors_preferences_cycles` user preferences.
+   :DLSS:
+      Uses NVIDIA DLSS Ray Reconstruction for viewport denoising, with optional upscaling
+      to improve performance by rendering at a lower resolution.
+      Requires a Blender build with DLSS support and a supported NVIDIA GPU enabled in the
+      :ref:`Cycles Render Devices <editors_preferences_cycles>` preferences.
+      See :ref:`DLSS requirements <render-cycles-gpu-dlss>` for hardware and driver requirements.
+
+      With DLSS enabled, the viewport renders continuously instead of accumulating samples toward a sample limit.
+      The viewport *Noise Threshold* and sample controls are disabled.
+      The required denoising passes are selected automatically, and denoising starts immediately,
+      so *Passes* and *Start Sample* are not shown.
+
+.. _bpy.types.CyclesRenderSettings.preview_denoising_upscale_quality:
+
+Upscale Mode :guilabel:`DLSS`
+   Controls the balance between image quality and performance for DLSS viewport denoising.
+   Upscaling renders at a lower resolution and reconstructs the image at the viewport resolution.
+
+   :None: Denoises without upscaling, providing the highest image quality.
+   :Quality: Prioritizes image quality over the performance gain of *Balanced*.
+   :Balanced: Balances image quality and performance.
+   :Performance: Prioritizes performance over the image quality of *Balanced*.
+   :Ultra Performance: Provides the greatest performance gain by using the lowest input resolution.
 
 .. _bpy.types.CyclesRenderSettings.preview_denoising_input_passes:
 .. _bpy.types.CyclesRenderSettings.denoising_input_passes:
