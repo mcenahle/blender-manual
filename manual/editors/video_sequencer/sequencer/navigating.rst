@@ -177,6 +177,28 @@ The :doc:`Sequencer Scene </video_editing/sequencer_scene>`
 is the scene that the edit shown in the Sequencer is contained in.
 
 
+Overlap Mode
+------------
+
+The *Ripple*, *Overwrite*, and *Shuffle* buttons determine how overlaps created by editing strips are resolved.
+See :ref:`Overlap Mode <bpy.types.SequencerToolSettings.overlap_mode>`.
+
+
+Edit Mode Popover
+-----------------
+
+The popover next to the Overlap Mode buttons contains options that control ripple operations.
+The settings are grouped by whether they apply to all ripple edits, adding strips, or deleting strips.
+See :ref:`Ripple Settings <sequencer-ripple-settings>`.
+
+
+Snapping Popover
+----------------
+
+The snapping button toggles snapping for strip transforms. The adjacent popover controls which timeline elements
+are used as snap targets and which strips are ignored. See :ref:`Snapping <bpy.types.ToolSettings.use_snap_sequencer>`.
+
+
 Playback Controls
 =================
 

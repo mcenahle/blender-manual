@@ -11,12 +11,49 @@ Controls
 Overlap Mode
 ------------
 
-Overlap Mode defines the result of transforming a strip so that it overlaps another strip.
+Overlap Mode defines how overlaps caused by moving, adding, or pasting strips are resolved.
 
-:Expand:
-   All strips on the right side of (each) transformed will be shifted forward to accommodate the overlapping strip.
-:Overwrite: The overlapped strip will be overwritten, trimmed or split by the overlapping strip.
-:Shuffle: The overlapping strip will be moved to the nearest free space so that it does not overlap.
+:Ripple:
+   Pushes strips that are in the way later in the timeline while preserving the spacing between them.
+:Overwrite:
+   Replaces the covered parts of strips that are in the way by trimming or splitting them.
+:Shuffle:
+   Moves the transformed strips to the nearest free space while leaving the other strips in place.
+
+While moving strips, press :kbd:`R`, :kbd:`V`, or :kbd:`S` to switch to *Ripple*, *Overwrite*, or *Shuffle*,
+respectively. When *Ripple* is active, press :kbd:`I` to toggle :ref:`Insert <sequencer-ripple-settings>`.
+Holding :kbd:`Shift` while dropping files onto the Sequencer temporarily uses *Ripple*.
+
+
+.. _sequencer-ripple-settings:
+
+Ripple Settings
+---------------
+
+The popover next to the Overlap Mode buttons configures ripple operations. These settings initialize
+the corresponding properties of operators such as Move, Ripple Trim, and Ripple Delete. They can be overridden
+for the most recent operation in the :ref:`Adjust Last Operation <bpy.ops.screen.redo_last>` panel.
+
+.. _bpy.types.SequencerToolSettings.ripple_all_channels:
+.. _bpy.types.SequencerToolSettings.ripple_markers:
+
+Edit -- All Channels
+   Ripples strips on all channels. When disabled, only the channels containing edited strips are affected.
+Edit -- Markers
+   Moves timeline :doc:`/animation/markers` together with rippled strips.
+
+.. _bpy.types.SequencerToolSettings.ripple_insert:
+
+Add -- Insert
+   Splits strips at the start of the edited range and pushes the later parts aside. When disabled,
+   strips are rippled only as far as necessary to resolve overlaps.
+
+.. _bpy.types.SequencerToolSettings.ripple_clear_ranges:
+
+Delete -- Clear Ranges
+   Deletes or trims other strip content within removed ranges on the rippled channels, allowing later strips
+   to close the entire range. When disabled, only empty parts of each range are closed, which preserves other
+   strip content but can limit how far later strips move.
 
 
 .. _bpy.types.ToolSettings.use_snap_sequencer:
@@ -83,6 +120,10 @@ Move vertically (up/down) to change channels.
 Holding down :kbd:`Ctrl` while dragging enables or disables snapping.
 
 You can also lock the direction to time with :kbd:`X` or to change the strip's channel with :kbd:`Y`.
+
+Press :kbd:`R`, :kbd:`V`, or :kbd:`S` during the move to change the
+:ref:`Overlap Mode <bpy.types.SequencerToolSettings.overlap_mode>`.
+In *Ripple* mode, :kbd:`I` toggles the *Insert* setting.
 
 It is possible to move strips using mouse by dragging them while holding :kbd:`LMB`.
 Currently it is possible to move only one strip by dragging.
@@ -493,6 +534,29 @@ number fields in the *Strip Info* panel.
    replacing the current strip with each.
 
 
+.. _bpy.ops.sequencer.ripple_trim:
+
+Ripple Trim
+===========
+
+.. reference::
+
+   :Menu:      :menuselection:`Strip --> Transform --> Ripple Trim Start/End`
+   :Shortcut:  :kbd:`Shift-Q`, :kbd:`Shift-W`
+
+Trims the selected strips at the current frame and closes the resulting gap. If no strips are selected,
+the active strip is trimmed. Locked strips and effect strips with inputs are not affected.
+
+Ripple Trim Start :kbd:`Shift-Q`
+   Removes the portions before the current frame.
+Ripple Trim End :kbd:`Shift-W`
+   Removes the portions after the current frame.
+
+The *All Channels* and *Markers* :ref:`Ripple Settings <sequencer-ripple-settings>` determine which other items
+move when the gap is closed. The current frame also moves when affected by the closed gap.
+These options can be overridden in the Adjust Last Operation panel.
+
+
 .. _bpy.ops.sequencer.duplicate_move:
 
 Duplicate
@@ -536,6 +600,10 @@ Ripple Delete
    :Shortcut:  :kbd:`Shift-Delete`, :kbd:`Shift-X`
 
 Deletes the selected strips and closes the resulting gaps by moving later strips earlier in the timeline.
+The current frame also moves when it is within or after a closed gap.
+
+The initial values of the following options come from the :ref:`Ripple Settings <sequencer-ripple-settings>`
+popover and can be overridden in the Adjust Last Operation panel.
 
 All Channels
    Also shifts strips on channels other than those containing the deleted strips.
@@ -545,6 +613,13 @@ All Channels
 Markers
    Shifts timeline :doc:`/animation/markers` together with the affected strips,
    keeping their positions relative to the sequence.
+
+Clear Ranges
+   Deletes or trims other strip content within the ranges occupied by the deleted strips, allowing later strips
+   to close the full duration of each range.
+
+   When disabled, only gaps within each range are closed. This preserves other strip content, but the amount
+   that later strips move may be limited.
 
 
 .. _bpy.ops.sequencer.delete:
