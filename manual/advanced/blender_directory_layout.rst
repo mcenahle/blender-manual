@@ -129,6 +129,12 @@ Path Layout
    ``./config/userpref.blend``
       User preferences.
 
+   ``./config/recents.toml``
+      Remembered UI state, including temporary window positions and sizes,
+      and the order and expanded or collapsed state of File Browser navigation panels.
+      Stored in TOML format and saved automatically when Blender exits,
+      independently of *Auto-Save Preferences*. Missing entries use built-in defaults.
+
    ``./config/bookmarks.txt``
       File Browser bookmarks.
 
