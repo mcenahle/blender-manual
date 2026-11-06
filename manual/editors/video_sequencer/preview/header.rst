@@ -32,8 +32,10 @@ Scrubbing Region
 
 .. _bpy.types.SpaceSequenceEditor.show_transform_preview:
 
-Preview During Transform
-   Show a preview of the start or end frame of a strip while transforming its respective handle.
+Preview Edit Point
+   Shows the affected frame instead of the current frame while editing in the timeline.
+   This includes the cut frame under the :ref:`Blade tool <tool-blade>`
+   and the start or end frame of a strip while moving its respective handle.
 
 ----------
 

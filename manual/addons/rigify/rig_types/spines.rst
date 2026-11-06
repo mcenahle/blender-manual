@@ -57,6 +57,10 @@ spines.basic_spine
 
 Defines a bendy and stretchy b-bones spine.
 
+B-Bone Segments
+   Number of :ref:`B-Bone segments <bendy-bones>` in each generated spine deform bone.
+   More segments allow smoother bending between tweak controls.
+
 Pivot Position (integer)
    Defines the pivot position for torso and hips.
 Assign Tweak Layers
@@ -74,6 +78,10 @@ spines.basic_tail
 
 Defines a bendy and stretchy b-bones tail.
 
+B-Bone Segments
+   Number of :ref:`B-Bone segments <bendy-bones>` in each generated tail deform bone.
+   More segments allow smoother bending between tweak controls.
+
 X, Y, Z (Boolean)
    Specifies which local axis rotations should be replicated along the chain from each control
    bone to the following one.
@@ -87,6 +95,10 @@ spines.super_head
 =================
 
 Defines a head rig with follow torso controls.
+
+B-Bone Segments
+   Number of :ref:`B-Bone segments <bendy-bones>` in each generated neck deform bone.
+   More segments allow smoother bending between tweak controls. The head deform bone remains a single segment.
 
 Assign Tweak Layers
    If enabled, allows placing the Tweak controls in different bone collections from the IK bones.
