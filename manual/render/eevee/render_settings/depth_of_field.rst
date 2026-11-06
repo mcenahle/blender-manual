@@ -73,4 +73,4 @@ Jitter Camera
 Over-blur
    Scales the post-process depth of field radius to reduce artifacts. Higher values will soften the bokeh shape.
 
-.. seealso:: :ref:`Limitations <eevee-limitations-dof>`.
+.. seealso:: :ref:`Limitations <eevee-limitations-dof>` and :ref:`Panoramic Camera Limitations <eevee-limitations-panoramic>`.

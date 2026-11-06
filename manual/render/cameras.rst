@@ -91,9 +91,12 @@ Orthographic
          :align: center
          :width: 50%
 
-Panoramic :guilabel:`Cycles Only`
+Panoramic
    This type covers a variety of panoramic projections.
-   See the Cycles :ref:`panoramic camera <bpy.types.Camera.panorama_type>` settings for more information.
+   See the :ref:`panoramic camera <bpy.types.Camera.panorama_type>` settings for more information.
+
+   Supported by Cycles and by EEVEE.
+   See the EEVEE :ref:`Panoramic Camera limitations <eevee-limitations-panoramic>` for details.
 
 Custom :guilabel:`Cycles Only`
    Custom cameras enable user-defined behavior through the use of OSL code.

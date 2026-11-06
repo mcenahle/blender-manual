@@ -45,4 +45,4 @@ Start
 End
    End distance of the volumetric effect.
 
-.. seealso:: :ref:`Limitations <eevee-limitations-volumetrics>`.
+.. seealso:: :ref:`Limitations <eevee-limitations-volumetrics>` and :ref:`Panoramic Camera Limitations <eevee-limitations-panoramic>`.
