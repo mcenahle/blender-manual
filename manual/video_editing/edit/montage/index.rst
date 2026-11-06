@@ -30,13 +30,6 @@ Grouping is the creating of a meta strip whereby several strips are grouped toge
    Therefore, all basic operations (add, split, trim, ...) have an associated shortcut.
    It pays off to learn these shortcuts, even though the same result could be obtained with the menu and/or mouse.
 
-   .. The choice of specific keys (e.g. :kbd:`X` for Delete) is of course inspired
-   .. by the meaning of the operation but also by the fact that the shortcut
-   .. must be easy to carry out with the left hand on a standard (Qwerty) keyboard.
-   .. So, the preferred shortcut for Delete is not the :kbd:`Delete`
-   .. key (which is on most keyboards on the right hand side) but the :kbd:`X` key.
-
-
 .. toctree::
    :maxdepth: 2
 
