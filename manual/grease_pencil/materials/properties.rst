@@ -319,7 +319,7 @@ Style
    :Solid:
       Uses a single base color.
    :Gradient:
-      Blends between two colors.
+      Uses a color ramp to define a gradient with multiple color stops.
 
       .. _bpy.types.MaterialGPencilStyle.gradient_type:
 
@@ -357,13 +357,18 @@ Style
 
 .. _bpy.types.MaterialGPencilStyle.fill_color:
 
-Base Color
+Base Color :guilabel:`Solid / Texture`
    Primary fill color.
 
-.. _bpy.types.MaterialGPencilStyle.mix_color:
+.. _bpy.types.MaterialGPencilStyle.gradient:
 
-Secondary Color :guilabel:`Gradient`
-   Secondary color used for gradients.
+Color Ramp :guilabel:`Gradient`
+   Defines the colors and opacity along the gradient.
+   Color stops control where each color appears, and interpolation controls the transitions between stops.
+   The gradient follows the selected *Gradient Type* and its mapping settings.
+
+   The *Flip Color Ramp* operator in the ramp's tools menu reverses the gradient.
+   See :ref:`Color Ramp Widget <ui-color-ramp-widget>` for the available controls.
 
 .. _bpy.types.MaterialGPencilStyle.use_fill_holdout:
 
@@ -373,13 +378,8 @@ Holdout
 
 .. _bpy.types.MaterialGPencilStyle.mix_factor:
 
-Blend :guilabel:`Gradient / Texture`
-   Controls mixing between Base Color and the gradient or texture.
-
-.. _bpy.types.MaterialGPencilStyle.flip:
-
-Flip Colors :guilabel:`Gradient`
-   Swaps Base and Secondary colors.
+Blend :guilabel:`Texture`
+   Controls mixing between Base Color and the texture.
 
 .. _bpy.types.MaterialGPencilStyle.texture_offset:
 
