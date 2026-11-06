@@ -11,6 +11,7 @@
    erase.rst
    fill.rst
    trim.rst
+   carver.rst
    eyedropper.rst
    line.rst
    polyline.rst

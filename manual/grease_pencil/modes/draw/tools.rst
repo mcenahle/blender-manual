@@ -40,6 +40,9 @@ Cursor
 :ref:`Trim <tool-grease-pencil-draw-trim>`
    Cut strokes in between others.
 
+:ref:`Carver <tool-grease-pencil-draw-carver>`
+   Cut strokes and fills using a lasso, creating holes or separate fill islands.
+
 :ref:`Eyedropper <tool-grease-pencil-draw-eyedropper>`
    Eyedropper to create new materials or palette color based on sampled colors in the 3D Viewport.
 
