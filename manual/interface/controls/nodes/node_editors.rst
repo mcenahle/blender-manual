@@ -81,6 +81,15 @@ Timings
 
    In the context of geometry nodes, see :ref:`modeling-geometry_nodes-inspection-timings`.
 
+.. _bpy.types.SpaceNodeOverlay.show_text_info:
+
+Text Info
+   Displays information about the image in the upper-left corner of the
+   Compositor editor, similar to the Image Editor.
+
+   The overlay shows the render resolution (*Render Size*) and the
+   dimensions of the displayed image (*Image Size*).
+
 .. _bpy.types.SpaceNodeOverlay.show_render_size:
 
 Render Region
