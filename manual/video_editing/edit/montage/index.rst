@@ -17,7 +17,7 @@ Before you can do anything with a strip, you have to select them. There are mult
 Strips can be moved in time (left to right on the X axis) or in the display stack (bottom to top on the Y axis).
 
 Splitting or cutting a strip will create two parts of the strip (before and after the split).
-There are two variants: Split and Hold Split.
+There are two variants: Split and Hard Split.
 
 Trimming is the process of removing or adding a portion of the video at its head or tail.
 This will result in a decrease or increase of the duration of the video.

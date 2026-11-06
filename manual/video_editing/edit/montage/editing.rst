@@ -473,12 +473,12 @@ This will result in two strips which use the same source, fitting the original s
    adjusting the start/end frames to form two non-overlapping strips showing the same content as before.
 
 
-Hold Split
+Hard Split
 ==========
 
 .. reference::
 
-   :Menu:      :menuselection:`Strip --> Hold Split`
+   :Menu:      :menuselection:`Strip --> Hard Split`
    :Shortcut:  :kbd:`Shift-K`
 
 Like *Split*, it splits a strip in two distinct strips;

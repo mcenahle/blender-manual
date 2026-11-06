@@ -14,12 +14,22 @@ up to the cut point, then adds a second strip that shows the content after the c
 
 The tool supports both point-based cuts and a box gesture for quickly removing unwanted sections of strips.
 
+Holding :kbd:`C` in the timeline temporarily activates Blade.
+Releasing :kbd:`C` restores the previous tool.
+A line marks the cut position, and tooltips show the affected frame values.
+While dragging a box, a highlighted region shows the area to remove.
+With :ref:`Preview Edit Point <bpy.types.SpaceSequenceEditor.show_transform_preview>` enabled,
+hovering over strips also displays the cut frame in the Preview.
+
 
 Usage
 =====
 
 - Click a strip at the time point where it should be split.
 - Click and drag to draw a box. All strip content inside the box is cut out and removed.
+
+Holding :kbd:`Shift` while clicking cuts across all channels at that frame.
+Holding :kbd:`Alt` while clicking or dragging prevents cuts from propagating to connected strips.
 
 When using the box gesture, all strip content inside the box area is deleted.
 With *Remove Gaps* enabled, strips that follow the removed section are moved backward in time
@@ -37,8 +47,12 @@ When the box spans gaps between strips, those gaps can also be removed when ripp
 Tool Settings
 =============
 
-Type
-   Split type for point-based cuts.
+Settings are grouped into *Split* for click cuts and *Box Blade* for box gestures.
+Each group has its own split type and selection settings.
+In the tool header, additional settings are available in the :menuselection:`...` popover.
+
+Type :guilabel:`Split` :guilabel:`Box Blade`
+   Determines whether cuts preserve access to trimmed content.
 
    :Soft:
       After splitting, it is still possible to restore the cut content in the new strips
@@ -48,12 +62,16 @@ Type
       However, the content can still be restored by adjusting the
       :ref:`Hold Offset <sequencer-duration-hard>` in the Sidebar.
 
-Remove Gaps
+All Channels :guilabel:`Split`
+   Cuts strips across all channels at the cut frame rather than only the channel under the pointer.
+
+Only Selected :guilabel:`Split` :guilabel:`Box Blade`
+   Restricts cuts to selected strips. Cuts do not propagate to unselected connected strips.
+
+Remove Gaps :guilabel:`Box Blade`
    In box blade mode, close gaps between cut strips, rippling later strips backward in time.
    Hold :kbd:`Shift` before dragging to temporarily disable this option and keep the gap.
 
-Ignore Selection
-   In box blade mode, cut all strips inside the box, even if they are not selected.
-
-Ignore Connections
-   Do not propagate the cut to connected strips, such as effect strips.
+Ignore Connections :guilabel:`Split` :guilabel:`Box Blade`
+   Does not propagate the cut to connected strips.
+   Unavailable when *Only Selected* is enabled, or for click cuts when *All Channels* is enabled.
