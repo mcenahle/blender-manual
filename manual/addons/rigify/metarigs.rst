@@ -264,7 +264,7 @@ Color Set
 Add Selection Set
   Specifies whether a selection set should be generated for this collection.
 
-UI Row
+Button Row
   If nonzero, specifies which row of the :ref:`Rig Layers <rigify.rig_ui_template.RigLayers>` panel should contain the
   button controlling the visibility of this collection. When zero, no button is generated, and the collection is
   hidden.
@@ -282,25 +282,26 @@ UI Layout sub-panel
    :width: 300px
 
 The UI Layout sub-panel provides a WYSIWYG editor for the layout of the generated UI panel
-(as defined by the UI Row and UI Title settings above).
+(as defined by the *Button Row* and *Button Text* settings above).
 
 Each row contains three buttons at the end:
 
 Arrow
    Moves the active collection button to this row.
 Plus
-   Inserts a new row before the current one.
+   Inserts a new row before the current one, shifting buttons down.
 Minus
-   Removes the current row and shifts all buttons up.
+   Removes the row current row, shifting its buttons and subsequent rows up.
 
 To the left of the editing control buttons, rows display buttons corresponding to the collections, same as the final
 UI, except that rather than hiding or unhiding, clicking these buttons selects the collection.
 
-For the active collection the selection button is replaced with an input field for editing the UI Title, and an **X**
-button to unassign the collection from the UI.
+For the active collection, the selection button is replaced with an input field for editing *Button Text*,
+and an *X* button to remove the collection's button from the generated UI.
+This changes *Button Row* to zero without deleting the bone collection.
 
 For any collections not assigned to the UI, their select buttons are displayed in a separate section at the bottom
-of the sub-panel.
+of the sub-panel named *Permanently Hidden Collections*.
 
 The ``Root`` collection will be added and/or assigned a UI button automatically if necessary when the rig is
 generated. If desired, it is possible to manually assign UI buttons to the internal ``ORG``, ``DEF`` and ``MCH``
