@@ -148,6 +148,16 @@ Disabling an effect passes the previous effect's result to the next
 enabled effect.
 
 
+Warnings
+--------
+
+Nodes that display warning messages in the Compositor editor also show
+those messages in the Scene Effect's properties.
+
+Custom warning messages can be created using the
+:doc:`Warning Node </compositing/types/output/warning>`.
+
+
 Editing Scene Effects
 =====================
 
