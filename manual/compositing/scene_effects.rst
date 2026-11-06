@@ -54,15 +54,32 @@ Each effect references a compositor node group, which can be edited in the
 Effects can be added, removed, duplicated, and reordered to build
 the desired compositing stack.
 
-The active effect determines which node group is displayed in the
-Compositor editor.
+
+.. _bpy.ops.scene.set_active_compositor_effect:
+
+Selecting Effects
+-----------------
+
+.. reference::
+
+   :Shortcut:  :kbd:`LMB`
+
+Click an effect in the stack to make it active.
+The active effect determines which node group is displayed in the Compositor editor.
 
 
+.. _bpy.ops.scene.add_compositor_effect_menu:
 .. _bpy.ops.scene.add_compositor_effect_node_group_asset:
 .. _bpy.ops.scene.new_compositor_effect_node_group:
 
 Adding Effects
 --------------
+
+.. reference::
+
+   :Shortcut:  :kbd:`Shift-A`
+
+Opens the Add Effect menu to add a new Scene Effect to the stack.
 
 Scene Effects can be created using existing compositor node groups or
 assets designed for use as Scene Effects.
@@ -72,6 +89,37 @@ allowing them to be reused across different scenes and projects.
 
 This makes it possible to build a library of common effects,
 such as bloom, color correction, blur, and other image adjustments.
+
+
+.. _bpy.ops.scene.duplicate_compositor_effect:
+
+Duplicating Effects
+-------------------
+
+.. reference::
+
+   :Shortcut:  :kbd:`Shift-D`
+
+Duplicates the selected Scene Effect, creating another effect that
+uses the same node group.
+
+This is useful for applying the same effect multiple times in the stack
+or creating variations of an existing effect.
+
+
+.. _bpy.ops.scene.remove_compositor_effect:
+
+Removing Effects
+----------------
+
+.. reference::
+
+   :Shortcut:  :kbd:`X`, :kbd:`Delete`
+
+Removes the selected Scene Effect from the stack.
+
+The remaining effects are evaluated in their existing order,
+with the output of the preceding effect passed to the next effect.
 
 
 Reordering Effects
@@ -99,6 +147,15 @@ or excluded from final rendering without removing them from the stack.
 Disabling an effect passes the previous effect's result to the next
 enabled effect.
 
+
+Warnings
+--------
+
+Nodes that display warning messages in the Compositor editor also show
+those messages in the Scene Effect's properties.
+
+Custom warning messages can be created using the
+:doc:`Warning Node </compositing/types/output/warning>`.
 
 
 Editing Scene Effects

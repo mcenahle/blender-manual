@@ -24,6 +24,40 @@ and select a specific
 Such configurations are less compatible with existing Blender assets and
 add-ons, but have naming and organization more consistent with other applications.
 
+
+Active Configuration
+====================
+
+The currently loaded OpenColorIO configuration can be inspected in
+:menuselection:`Render Properties --> Color Management --> Advanced`.
+
+Source
+   Displays where the active OpenColorIO configuration was loaded from,
+   such as an environment variable, the active Blender Project,
+   or Blender's bundled configuration.
+
+Path
+   Displays the path to the loaded OpenColorIO configuration file.
+
+This information is useful for troubleshooting color management differences
+between projects or identifying why a particular configuration was loaded.
+
+Blender searches for an OpenColorIO configuration in the following order,
+using the first available valid configuration:
+
+#. The ``BLENDER_OCIO`` environment variable.
+#. The ``OCIO`` environment variable.
+#. The active :ref:`Blender Project <projects-ocio_config>` configuration.
+#. Blender's bundled configuration.
+#. Blender's fallback configuration.
+
+.. note::
+
+   Changes to the project OpenColorIO configuration are not applied automatically.
+   The blend-file must be reloaded for the new configuration to take effect.
+   This can be done using *Reload to Apply Changes* in the Project Settings.
+
+
 Environment Variables
 =====================
 

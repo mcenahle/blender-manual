@@ -679,6 +679,8 @@ are supported directly by this add-on:
 - ``EXT_meshopt_compression``
 - ``KHR_meshopt_compression``
 - ``KHR_animation_pointer``
+- ``EXT_texture_webp``
+- ``KHR_texture_basisu``
 - ``KHR_gaussian_splatting``
 
 .. rubric:: Export
@@ -701,6 +703,8 @@ are supported directly by this add-on:
 - ``EXT_meshopt_compression``
 - ``KHR_meshopt_compression``
 - ``KHR_animation_pointer``
+- ``EXT_texture_webp``
+- ``KHR_texture_basisu``
 
 Third-party glTF Extensions
 ---------------------------
@@ -944,6 +948,8 @@ Pack Images
    Pack all images into the blend-file.
 Import WebP textures
    If a texture exists in WebP format, loads the WebP texture instead of the fallback png/jpg one.
+Import KTX textures
+   If a texture exists in KTX format, loads the KTX texture instead of the fallback png/jpg one.
 Import unused Materials & Textures
    Import all materials and textures, even if they are not used in the scene.
 
@@ -1113,10 +1119,12 @@ Images
    If None is chosen, materials are exported without textures.
 Image Quality
    When exporting jpeg or WebP files, the quality of the exported file.
-Create WebP
-   Creates WebP textures for every textures, in addition to the existing texture.
+Create Compressed Images
+   Creates WebP or KTX textures for every textures, in addition to the existing texture.
    For already WebP textures, nothing happens.
-WebP fallback
+Compressed images Type
+   Choose the type of compressed images to create: WebP or KTX.
+Compressed Images Fallback
    For all WebP textures, create a png fallback texture.
 Unused images
    Export images that are not used in any material.

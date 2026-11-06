@@ -77,6 +77,25 @@ Image
    Standard color output.
 
 
+Usage
+=====
+
+Interactive Gizmo
+-----------------
+
+The Scale node provides an interactive gizmo for adjusting the size
+of an image directly in the preview.
+
+Dragging the gizmo adjusts the scale inputs, allowing the image
+to be resized interactively.
+
+The gizmo supports multiple transformations connected in sequence,
+allowing adjustments to account for preceding transformations.
+
+See :ref:`Node Gizmos <compositor-node-gizmos>` for information on
+enabling and using gizmos in the Compositor and Image Editor.
+
+
 Examples
 ========
 
