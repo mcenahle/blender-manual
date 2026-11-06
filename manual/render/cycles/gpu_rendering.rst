@@ -107,6 +107,22 @@ macOS 13.0 or newer is required to support all features.
 GPU accelerated ray-tracing and denoising is available on Apple Silicon.
 
 
+.. _render-cycles-gpu-dlss:
+
+DLSS Viewport Denoising
+=======================
+
+NVIDIA DLSS Ray Reconstruction is available for
+:ref:`viewport denoising <render-cycles-settings-viewport-denoising>` with CUDA and OptiX devices.
+It requires a Blender build with DLSS support, an NVIDIA GPU with compute capability 7.5 or higher,
+and NVIDIA driver version 590 or newer. The driver must report support for DLSS Ray Reconstruction on the device.
+
+Enable a supported GPU under *CUDA* or *OptiX* in the
+:ref:`Cycles Render Devices <editors_preferences_cycles>` preferences,
+then select *DLSS* as the viewport *Denoiser* in the render settings.
+DLSS is not available for final render denoising.
+
+
 Limitations
 ===========
 
