@@ -58,3 +58,20 @@ Outputs
 
 Image
    Standard color output.
+
+
+
+Usage
+=====
+
+Interactive Gizmo
+-----------------
+
+The Translate node provides an interactive gizmo for repositioning the image.
+Dragging the gizmo adjusts the *X* and *Y* inputs directly.
+
+The gizmo also works when multiple transformation nodes are connected in sequence,
+allowing the image position to be adjusted relative to preceding transformations.
+
+See :ref:`Node Gizmos <compositor-node-gizmos>` for information on
+enabling and using gizmos in the Compositor and Image Editor.
