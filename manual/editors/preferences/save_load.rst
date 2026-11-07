@@ -129,8 +129,12 @@ Auto Run Python Scripts
 -----------------------
 
 Python scripts (including driver expressions) are not executed by default for security reasons.
-You may be working on projects where you only load files from trusted sources,
-making it more convenient to allow scripts to be executed automatically.
+Enabling this option automatically runs scripts when blend-files are opened, unless their paths are excluded below.
+
+.. warning::
+
+   Opening blend-files from the internet or other untrusted sources is unsafe while this option is enabled.
+   Prefer enabling scripts for individual files with the *Trusted Source* option when possible.
 
 .. _bpy.types.PathCompare:
 

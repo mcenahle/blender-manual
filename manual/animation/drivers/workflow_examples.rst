@@ -99,6 +99,38 @@ custom functions, using them only makes sense for complex computations.
 .. warning::
    Trying to replace built-in entries of the driver namespace may result in undefined behavior.
 
+
+.. _driver-dependency-graph:
+
+Dependency Graph Context
+========================
+
+Scripted driver expressions have access to a built-in ``depsgraph`` variable containing the dependency graph
+that is currently evaluating the driver. This provides the correct scene and view layer when multiple contexts
+are evaluated at the same time, such as a render running while another view layer is displayed in a viewport.
+
+Avoid using ``bpy.context`` in driver expressions and custom driver functions. It represents the interface context
+and may not match the context evaluating the driver. Pass ``depsgraph`` to a custom function instead.
+
+For example, the following function returns whether the driver is being evaluated for a view layer named
+``View Layer 1``:
+
+.. code-block:: python
+
+   import bpy
+
+   def is_view_layer_1(depsgraph):
+       return depsgraph.view_layer.name == "View Layer 1"
+
+   bpy.app.driver_namespace["is_view_layer_1"] = is_view_layer_1
+
+After running the script, use ``is_view_layer_1(depsgraph)`` as the driver expression. The Boolean result is
+converted to ``1.0`` when true and ``0.0`` when false.
+
+Expressions using ``depsgraph`` require Python evaluation and are not part of the
+:ref:`Simple Expressions <drivers-simple-expressions>` subset.
+
+
 .. _driver-attribute-node-emulation:
 
 View Layer Attribute Lookup

@@ -11,11 +11,18 @@ Automatic execution is disabled by default;
 however, some blend-files need this to function properly.
 
 When a blend-file tries to execute a script and is not allowed, a dialog will appear.
-In it, you can choose to *Allow Execution* or to *Ignore* the scripts.
+It warns that allowing the scripts may be unsafe and offers the following choices:
 
-.. figure:: /images/advanced_scripting_security_autorun-scripts-dialog.png
+.. figure:: /images/advanced_scripting_security_autorun-scripts-dialog.jpg
 
    An Auto-run warning in the Info editor's header.
+
+Continue Safely
+   Keeps the file open without running its scripts.
+Allow Execution
+   Allows scripts for the current file. Saved files are reloaded so their scripts can run.
+
+Choosing *Allow Execution* does not enable *Auto Run Python Scripts* in the Preferences.
 
 
 Scripts in Blend-Files
@@ -49,11 +56,9 @@ Controlling Script Execution
 Blender provides a number of ways to control whether scripts
 from a blend-file are allowed to automatically execute.
 
-First, the File Browser has the option **Trusted Source** which you can use on
-a case-by-case basis to control auto execution.
-Since you may forget to set this,
-or may open a file without going through the File Browser,
-you can change the default (described next).
+First, the File Browser has the *Trusted Source* option for controlling auto execution
+on a case-by-case basis. Files can also be opened without using the File Browser,
+so the default can be changed as described below.
 
 
 Setting Defaults
@@ -61,10 +66,15 @@ Setting Defaults
 
 In the Preferences, there is the toggle to
 :ref:`Auto Run Python Scripts <bpy.types.PreferencesFilePaths.use_scripts_auto_execute>`.
-This means the **Trusted Source** option in the File Browser will be enabled by default,
+This means the *Trusted Source* option in the File Browser will be enabled by default,
 and scripts can run when blend-files are loaded without using the File Browser.
-Once enabled you have the option to exclude certain directories;
+Once enabled, certain directories can be excluded;
 a typical configuration would be to trust all paths except for the download directory.
+
+.. warning::
+
+   This is a global default. Opening blend-files from the internet or other untrusted sources while it is enabled
+   can run malicious code. Prefer enabling *Trusted Source* for individual files when possible.
 
 .. figure:: /images/animation_drivers_troubleshooting_autorun-user-preference.png
 
