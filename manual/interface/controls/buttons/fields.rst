@@ -47,6 +47,22 @@ Text fields store text strings, and provide the means to edit text by standard t
 
 For text fields with an icon and pop-ups, see :ref:`ui-data-id`.
 
+.. _ui-input-method-editors:
+
+Input Method Editors
+--------------------
+
+Text fields support input method editors (IMEs), which allow text to be
+composed using a keyboard layout or input method for languages such as
+Chinese, Japanese, and Korean. While text is being composed, the IME handles
+composition keys before Blender applies text-editing commands.
+
+IME input is supported in :doc:`3D Viewport text object editing
+</modeling/texts/editing>`, :doc:`Python Console
+</editors/python_console>`, :doc:`Text Editor </editors/text_editor>`, and
+:doc:`Sequencer text strips </video_editing/edit/montage/strips/text>`.
+Inline text preview and editing during composition is not currently supported.
+
 
 Text Boxes
 ----------

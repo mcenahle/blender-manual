@@ -93,6 +93,15 @@ working with Blender.
    assumes you are using the default keymap.
 
 
+Input Method Editors
+^^^^^^^^^^^^^^^^^^^^
+
+Configure the desired :abbr:`IME (Input Method Editor)` in your operating
+system to enter text in languages such as Chinese, Japanese, and Korean.
+See :ref:`Input Method Editors <ui-input-method-editors>` for information
+about IME support in Blender.
+
+
 .. _hardware-touch:
 
 Touch Screens
