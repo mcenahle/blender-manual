@@ -301,6 +301,10 @@ Expression
    ``bl_math`` and other modules, provided in the *Driver Namespace*. For an example of adding
    a custom function to the namespace, see the :ref:`driver namespace example <driver-namespace>`.
 
+   The built-in ``depsgraph`` variable refers to the dependency graph currently evaluating the driver.
+   It can be used directly or passed to a custom driver function when evaluation context is required.
+   See the :ref:`dependency graph example <driver-dependency-graph>`.
+
    For performance reasons it is best to use the `Simple Expressions`_ subset as much as possible.
 
 .. _bpy.types.Driver.use_self:
