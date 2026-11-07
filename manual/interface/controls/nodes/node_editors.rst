@@ -63,6 +63,10 @@ Context Path
    Display breadcrumbs in the upper left corner indicating the hierarchy location
    of the node tree/group that's currently being displayed.
 
+   Clicking an earlier breadcrumb returns to that level of the hierarchy. The arrow next to a breadcrumb opens a menu
+   containing the node groups that can be entered from that level. The groups are sorted by name, and the group
+   on the current path is highlighted. Selecting a group enters it directly.
+
 .. _bpy.types.SpaceNodeEditor.show_annotation:
 
 Annotations
