@@ -13,7 +13,7 @@ Scripted Expression
 
    A security warning in the Drivers panel.
 
-.. figure:: /images/advanced_scripting_security_autorun-scripts-dialog.png
+.. figure:: /images/advanced_scripting_security_autorun-scripts-dialog.jpg
 
    An Auto-run warning in the Info editor's header.
 
