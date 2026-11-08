@@ -77,10 +77,18 @@ Depending on the *Display Mode*, some options are not available.
 Restriction Toggles
    Set which `Restriction Toggles`_ should be visible.
 
-.. _bpy.types.SpaceOutliner.use_sort_alpha:
+.. _bpy.types.SpaceOutliner.sort_method:
 
-Sort Alphabetically
-   Sort the entries alphabetically.
+Sort
+   Select how the entries in the Outliner are ordered:
+
+   :Alphabetical:
+      Sort the entries alphabetically.
+   :Custom:
+      Order the entries manually by dragging them to a new position.
+      Objects and collections can be interleaved in the custom order.
+   :No Sorting:
+      Show the entries in the order in which they are stored internally.
 
 .. _bpy.types.SpaceOutliner.use_sync_select:
 
