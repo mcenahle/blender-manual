@@ -6,15 +6,8 @@ Editing Tools
 .. figure:: /images/grease-pencil_modes_edit_tools_toolbar.png
    :align: right
 
-:ref:`Select <tool-select-tweak>`
-   Select or moved.
-
-   :ref:`Select Box <tool-select-box>`
-      Select geometry by dragging a box.
-   :ref:`Select Circle <tool-select-circle>`
-      Select geometry by painting on it.
-   :ref:`Select Lasso <tool-select-lasso>`
-      Select geometry by drawing a lasso.
+:doc:`Selection Tools </grease_pencil/modes/selection>`
+   Select points, strokes, or segments with the selection tools.
 
 Cursor
    Change the location of the 3D Cursor.

@@ -268,7 +268,7 @@ To create a fill guide stroke use :kbd:`Alt-LMB` and draw a line to close the de
           Use the Fill tool to leak material on the new closed area.
 
 When you are satisfied with the fill result you can delete the fill guide using
-the *Clean Up* tool in the :doc:`Grease Pencil Menu </grease_pencil/modes/edit/grease_pencil_menu>` in Edit Mode.
+the *Clean Up* tool in :doc:`Grease Pencil Editing </grease_pencil/modes/stroke_editing>`.
 
 
 Automatic Gap Closure

@@ -2,40 +2,14 @@
 Drawing Operations
 ******************
 
-Active Layer
-============
+Basic selection and stroke-editing operations are documented in
+:doc:`Grease Pencil Editing </grease_pencil/modes/stroke_editing>`.
 
-.. reference::
+.. toctree::
+   :maxdepth: 1
 
-   :Mode:      Draw Mode
-   :Menu:      :menuselection:`Draw --> Active Layer`
-   :Shortcut:  :kbd:`Y`
-
-Select the active layer.
-
-
-Animation
-=========
-
-.. reference::
-
-   :Mode:      Draw Mode
-   :Menu:      :menuselection:`Draw --> Animation`
-   :Shortcut:  :kbd:`I`
-
-The stroke animation operations are described in the :doc:`Animation </grease_pencil/animation/tools>` section.
-
-
-Interpolate Sequence
-====================
-
-.. reference::
-
-   :Mode:      Draw Mode
-   :Menu:      :menuselection:`Draw --> Interpolate Sequence`
-
-See :ref:`bpy.ops.grease_pencil.interpolate_sequence`.
-
+   draw_menu.rst
+   stroke_menu.rst
 
 .. _bpy.ops.grease_pencil.erase_lasso:
 
