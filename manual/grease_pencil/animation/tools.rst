@@ -21,9 +21,6 @@ a new blank keyframe will be added on the next frame.
 All Layers
    When enabled, Blank keyframe will be created on all layers, not only the active one.
 
-Duration
-   The number of blank frames to insert.
-
 
 Insert Blank Keyframe (All Layers)
 ==================================
