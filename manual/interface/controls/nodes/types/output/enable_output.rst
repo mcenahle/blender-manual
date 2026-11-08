@@ -39,3 +39,16 @@ Outputs
 Value
    The same data as the *Value* input when *Enable* is *True*.
    When *Enable* is *False*, the output is disabled and not available to the group output.
+
+
+Usage
+=====
+
+The *Value* output can be connected to a *Switch*, *Index Switch*, or *Menu
+Switch* node. The switch output must ultimately be connected to a Group Output.
+The output is enabled based on the selected switch input, allowing different
+group outputs to be enabled by different branches.
+
+.. figure:: /images/node-types_NodeEnableOutput_switches.png
+
+   Enable Output node connected through switch nodes.
