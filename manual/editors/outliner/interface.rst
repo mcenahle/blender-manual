@@ -104,6 +104,14 @@ Expand on Focus
 Show Mode Column
    Show the column for toggling the :doc:`object interaction mode </editors/3dview/modes>`.
 
+.. _bpy.types.SpaceOutliner.use_filter_lib_override_system:
+
+System Overrides
+   Shows the data-block properties that are defined/controlled automatically
+  (e.g. to make data-blocks point to overridden data instead of the original).
+
+  Only available in the *Library Overrides* `Display Mode`_.
+
 
 Search
 ^^^^^^
@@ -163,10 +171,15 @@ Object State
       Only show the objects that can be selected in the 3D Viewport;
       see :ref:`editors-outliner-interface-restriction_columns`.
 
-.. _bpy.types.SpaceOutliner.use_filter_object_content:
+.. _bpy.types.SpaceOutliner.use_filter_object_mesh:
+.. _bpy.types.SpaceOutliner.use_filter_object_light:
+.. _bpy.types.SpaceOutliner.use_filter_object_camera:
+.. _bpy.types.SpaceOutliner.use_filter_object_grease_pencil:
+.. _bpy.types.SpaceOutliner.use_filter_object_empty:
+.. _bpy.types.SpaceOutliner.use_filter_object_others:
 
-Object Contents
-   List relevant materials, modifiers, mesh data and so on as children of each object.
+Meshes, Lights, Cameras, Grease Pencil, Empties, Others
+  Filter objects by type. Only types present in the Blend-file are listed.
 
 .. _bpy.types.SpaceOutliner.use_filter_children:
 
@@ -175,22 +188,36 @@ Object Children
    When disabled, child objects are shown as sibling nodes instead (unless they're in a different collection
    than their parent, in which case they're not shown in the parent's collection at all).
 
-.. _bpy.types.SpaceOutliner.use_filter_object_mesh:
-.. _bpy.types.SpaceOutliner.use_filter_object_light:
-.. _bpy.types.SpaceOutliner.use_filter_object_camera:
-.. _bpy.types.SpaceOutliner.use_filter_object_grease_pencil:
-.. _bpy.types.SpaceOutliner.use_filter_object_empty:
-.. _bpy.types.SpaceOutliner.use_filter_object_others:
 
-Meshes/Lights/...
-   Lets you filter out objects by type.
+.. _bpy.types.SpaceOutliner.use_filter_object_content:
+.. _bpy.types.SpaceOutliner.use_filter_object_data:
+.. _bpy.types.SpaceOutliner.use_filter_object_vertex_groups:
+.. _bpy.types.SpaceOutliner.use_filter_object_shape_keys:
+.. _bpy.types.SpaceOutliner.use_filter_object_animation:
+.. _bpy.types.SpaceOutliner.use_filter_object_constraints:
+.. _bpy.types.SpaceOutliner.use_filter_object_modifiers:
+.. _bpy.types.SpaceOutliner.use_filter_bone_collections:
+.. _bpy.types.SpaceOutliner.use_filter_grease_pencil_effects:
+.. _bpy.types.SpaceOutliner.use_filter_pose_bones:
+.. _bpy.types.SpaceOutliner.use_filter_object_materials:
 
-.. _bpy.types.SpaceOutliner.use_filter_lib_override_system:
+Object Contents
+"""""""""""""""
 
-System Overrides
-   Shows the data-block properties that are defined/controlled automatically (e.g. to make data-blocks
-   point to overridden data instead of the original). Only available in the *Library Overrides*
-   `Display Mode`_.
+List relevant data-blocks and other contents as children of each object.
+When enabled, the following options can be used to control which contents are shown:
+
+- **Object Data** -- Show the data-block associated with the object, such as a mesh, light, camera,
+  or Grease Pencil data-block.
+- **Vertex Groups** -- Show the object's vertex groups.
+- **Shape Keys** -- Show the object's shape keys.
+- **Animation Data** -- Show the object's animation data.
+- **Constraints** -- Show the object's constraints.
+- **Modifiers** -- Show the object's modifiers.
+- **Bone Collections** -- Show the armature's bone collections.
+- **Grease Pencil Effects** -- Show the object's Grease Pencil effects.
+- **Pose Bones** -- Show the armature's pose bones.
+- **Materials** -- Show the object's materials.
 
 
 Miscellaneous
