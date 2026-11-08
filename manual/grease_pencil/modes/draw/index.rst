@@ -7,6 +7,7 @@
    :maxdepth: 2
 
    introduction.rst
+   selecting.rst
    brushes/index.rst
    tools.rst
    tools/index.rst

@@ -10,6 +10,9 @@ Drawing Tools
 Cursor
    Change the location of the 3D Cursor.
 
+:doc:`Selection Tools </grease_pencil/modes/selection>`
+   Select existing strokes with the Tweak, Box, Circle, and Lasso tools.
+
 :doc:`Brush </grease_pencil/modes/draw/tools/brush>`
    Tool to use for any of the :doc:`drawing brushes </grease_pencil/modes/draw/brushes/draw>`.
 

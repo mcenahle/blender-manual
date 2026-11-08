@@ -32,13 +32,12 @@ You can enter the different modes by selecting one of the three buttons in the h
    Points, stroke and in between stroke selection sample.
 
 
-.. _bpy.ops.grease_pencil.select_all:
+Selection tools and operators shared with Draw Mode are documented in the
+:doc:`Grease Pencil selection </grease_pencil/modes/selection>` section.
 
-Select All/None/Invert
-======================
 
-All these options have the same meaning and behavior as in
-:doc:`Object Mode </scene_layout/object/selecting>`.
+:ref:`Select All/None/Invert <bpy.ops.grease_pencil.select_all>`
+================================================================
 
 
 .. _bpy.ops.grease_pencil.select_random:
@@ -103,24 +102,8 @@ Less
    Conversely, the same goes when no points are selected.
 
 
-.. _bpy.ops.grease_pencil.select_by_stroke_type:
-
-By Stroke Type
-==============
-
-.. reference::
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Select --> By Stroke Type`
-
-Selects curves based on whether they are strokes or fills.
-
-Type
-   :Stroke: Select all stroke curves (outlines).
-   :Fill: Select all fill curves (enclosed filled shapes).
-
-Deselect
-   If enabled, matching curves are deselected instead of selected.
+:ref:`By Stroke Type <bpy.ops.grease_pencil.select_by_stroke_type>`
+===================================================================
 
 
 .. _bpy.ops.grease_pencil.select_similar:
@@ -149,25 +132,8 @@ Threshold
    How similar the selection must be.
 
 
-.. _bpy.ops.grease_pencil.select_fill:
-
-Select Fill
-===========
-
-.. reference::
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Select --> Select Fill`
-   :Shortcut:  :kbd:`Ctrl-L`
-
-Selects all curves that belong to the same fill region as the active curve.
-
-Grease Pencil fills can be composed of multiple boundary curves.
-This operator expands the current selection to include all curves
-that define the same enclosed fill area.
-
-This is useful when editing or transforming an entire filled shape,
-ensuring that all boundary strokes are selected together.
+:ref:`Select Fill <bpy.ops.grease_pencil.select_fill>`
+======================================================
 
 
 .. _bpy.ops.grease_pencil.select_linked:

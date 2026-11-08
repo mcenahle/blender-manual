@@ -425,49 +425,16 @@ Set Start Point
 Set the start point for cyclic strokes, determining the point where the stroke begins and ends when it loops.
 
 
-.. _bpy.ops.grease_pencil.set_uniform_thickness:
-
-Set Uniform Thickness
-=====================
-
-.. reference::
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Stroke --> Set Uniform Thickness`
-
-Makes the thickness equal for the entire stroke.
-
-Thickness
-   Thickness value to use on all points of the stroke.
+:ref:`Set Uniform Thickness <bpy.ops.grease_pencil.set_uniform_thickness>`
+==========================================================================
 
 
-.. _bpy.ops.grease_pencil.set_uniform_opacity:
-
-Set Uniform Opacity
-===================
-
-.. reference::
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Stroke --> Set Uniform Opacity`
-
-Makes the opacity equal for the entire stroke.
-
-Opacity
-   Opacity value to use on all points of the stroke.
+:ref:`Set Uniform Opacity <bpy.ops.grease_pencil.set_uniform_opacity>`
+======================================================================
 
 
-.. _bpy.types.GPencilSculptSettings.use_scale_thickness:
-
-Scale Thickness
-===============
-
-.. reference::
-
-   :Mode:      Edit Mode
-   :Menu:      :menuselection:`Stroke --> Scale Thickness`
-
-When enabled, scales the stroke thickness during scale transformations.
+:ref:`Scale Thickness <bpy.types.GPencilSculptSettings.use_scale_thickness>`
+============================================================================
 
 
 .. _bpy.ops.grease_pencil.set_curve_type:

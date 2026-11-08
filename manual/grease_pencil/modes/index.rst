@@ -57,3 +57,15 @@ and precise deformations based on the painted weights.
 
 This mode allows working with the entire Grease Pencil object as a whole.
 It's used for overall transformations and managing the placement of the object within the scene.
+
+
+Shared Workflows
+================
+
+The following pages describe workflows shared by multiple Grease Pencil modes.
+
+.. toctree::
+   :maxdepth: 1
+
+   selection.rst
+   stroke_editing.rst

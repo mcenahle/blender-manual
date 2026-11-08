@@ -6,9 +6,10 @@ Introduction
 Draw Mode is the mode in Grease Pencil that allows you to draw in the 3D Viewport.
 This mode is actually the only one in which new strokes can be created.
 
-Already made strokes can not be selected in Draw Mode, for editing strokes you must use
-the :doc:`Edit Mode </grease_pencil/modes/edit/introduction>` or
-:doc:`Sculpt Mode </grease_pencil/modes/sculpting/introduction>`.
+Existing strokes can also be selected and edited in Draw Mode. Draw Mode selection is limited to complete strokes; use
+:doc:`Edit Mode </grease_pencil/modes/edit/introduction>` for point-level and
+advanced stroke editing, or :doc:`Sculpt Mode
+</grease_pencil/modes/sculpting/introduction>` for brush-based deformation.
 
 .. figure:: /images/grease-pencil_modes_draw_introduction_mode-selector.png
 
@@ -25,6 +26,10 @@ for free-hand drawings but there are many other tools for drawing, filling areas
 There are also some tools to create primitives shapes like lines, arcs, curves, boxes and circles.
 
 See :doc:`Toolbar </grease_pencil/modes/draw/tools>` for more details.
+See :doc:`Selecting </grease_pencil/modes/draw/selecting>` for selecting
+existing strokes.
+See the :doc:`Draw Menu </grease_pencil/modes/draw/draw_menu>` and
+:doc:`Stroke Menu </grease_pencil/modes/draw/stroke_menu>` for menu operations.
 
 
 Strokes Location & Orientation Controls
