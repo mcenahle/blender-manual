@@ -24,8 +24,9 @@ To create a new Blender Project, select :menuselection:`File --> Project --> New
 
 .. figure:: /images/projects_new_menu.png
 
-A file browser will pop up. Navigate to the desired root directory of your project,
-and click the *New Project* button.
+A dialog will open where you can enter a project name and choose the directory
+that will contain the project root. Click the *New Project* button to create
+the project.
 
 
 Opening Projects
