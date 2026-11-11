@@ -8,8 +8,6 @@ Sheen BSDF
    :align: right
    :alt: Sheen BSDF node.
 
-:guilabel:`Cycles Only`
-
 The *Sheen* :abbr:`BSDF (Bidirectional Scattering Distribution Function)`
 is used to add reflection to materials that have micro surface details such as cloth or dust.
 This shader is intended to be layered on top of other shaders such as
@@ -34,7 +32,7 @@ Properties
 Distribution
    Sheen shading model.
 
-   :Ashikhmin: Classic Ashikhmin velvet, used in Blender versions prior to 4.0
+   :Ashikhmin: :guilabel:`Cycles Only` Classic Ashikhmin velvet, used in Blender versions prior to 4.0
    :Microfiber: Microflake-based model of multiple scattering between normal-oriented fibers.
 
 

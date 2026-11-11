@@ -137,7 +137,7 @@ Normal
 Diffuse
 -------
 
-Roughness :guilabel:`Cycles Only`
+Roughness
    Surface roughness; 0.0 gives standard Lambertian reflection, higher values activate the Oren-Nayar BSDF.
 
 
