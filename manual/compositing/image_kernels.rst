@@ -78,6 +78,10 @@ Or the *Sobel* kernel (horizontal edges):
     0   0   0
     1   2   1
 
+.. figure:: /images/compositing_image_kernel_example.jpg
+   :width: 800px
+
+   Example node setup to create a 3x3 Sobel filter (horizontal edges)
 
 Normalization
 =============
